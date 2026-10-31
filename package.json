@@ -1,0 +1,17 @@
+{
+  "name": "pessiai",
+  "version": "1.1.0",
+  "description": "PessiAI with a public chat and a server-protected private AI page.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "better-sqlite3": "^13.0.3",
+    "connect-sqlite3": "^0.9.18",
+    "dotenv": "^16.6.1",
+    "express": "^4.22.3",
+    "express-session": "^1.19.0"
+  }
+}

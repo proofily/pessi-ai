@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PessiAI — Human Chat</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <main class="app">
+    <header class="topbar">
+      <div><div class="eyebrow">YOUR AI ASSISTANT</div><h1>🤖 PessiAI</h1></div>
+      <span class="public-tag">HUMAN CHAT</span>
+    </header>
+    <section class="chat panel">
+      <div class="panel-title"><img class="ai-avatar" src="/profile.png" alt="PessiAI profile picture"><span class="status-dot"></span> Chat with PessiAI</div>
+      <div id="messages" class="messages" aria-live="polite">
+        <div class="bubble ai"><strong>PessiAI</strong><p>Hiiii! I'm a AI. Ask me something. Probably a potato.</p></div>
+      </div>
+      <form id="chatForm" class="composer">
+        <input id="messageInput" autocomplete="off" placeholder="Say something silly..." maxlength="1000" aria-label="Message">
+        <button type="submit">Send ↗</button>
+      </form>
+    </section>
+    <p class="public-note">Welcome to PessiAI.</p>
+    <footer>Made with JavaScript, Node.js, and Comic Sans and JavaScript.</footer>
+  </main>
+  <script src="/human.js"></script>
+</body>
+</html>

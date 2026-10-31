@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap');
+:root { --ink:#322441; --purple:#8874ff; --line:#eadff6; }
+* { box-sizing:border-box; }
+body { margin:0; color:var(--ink); font-family:"Comic Sans MS","Comic Sans","Comic Neue",cursive; background:radial-gradient(circle at 12% 12%,#ffe1ef 0,transparent 28rem),radial-gradient(circle at 88% 20%,#e7e2ff 0,transparent 30rem),#f8f4ff; }
+button,input { font:inherit; }
+button { border:0; border-radius:13px; background:var(--purple); color:white; font-weight:700; padding:11px 16px; cursor:pointer; box-shadow:0 4px 0 #6754cf; transition:transform .12s,box-shadow .12s; }
+button:hover { transform:translateY(-1px); box-shadow:0 5px 0 #6754cf; }
+button:active { transform:translateY(2px); box-shadow:0 2px 0 #6754cf; }
+button.secondary { background:white; color:var(--ink); border:2px solid var(--line); box-shadow:0 4px 0 #e7ddef; }
+.app { width:min(1180px,calc(100% - 32px)); margin:28px auto; }
+.topbar,.draw-heading { display:flex; justify-content:space-between; align-items:center; gap:18px; }
+.eyebrow { color:#9a71c7; font-weight:700; letter-spacing:2px; font-size:11px; }
+h1 { font-size:clamp(25px,4vw,38px); margin:4px 0 22px; }
+.layout { display:grid; grid-template-columns:minmax(0,1.5fr) minmax(260px,.85fr); gap:18px; align-items:start; }
+.panel { background:rgba(255,255,255,.9); border:2px solid var(--line); border-radius:22px; padding:18px; box-shadow:0 9px 24px #3d24500c; }
+.panel-title { font-weight:700; font-size:18px; margin-bottom:14px; display:flex; align-items:center; gap:9px; }
+.status-dot { width:10px; height:10px; border-radius:50%; background:#65d69a; box-shadow:0 0 0 4px #65d69a25; }
+.messages { min-height:280px; max-height:420px; overflow:auto; padding:4px 4px 12px; display:flex; flex-direction:column; gap:12px; }
+.bubble { max-width:90%; padding:12px 15px; border-radius:17px; line-height:1.45; overflow-wrap:anywhere; }
+.bubble p { margin:4px 0 0; white-space:pre-wrap; }
+.bubble.ai { background:#f0edff; border:1px solid #e0d9ff; align-self:flex-start; border-bottom-left-radius:5px; }
+.bubble.user { background:#ffe5f0; border:1px solid #ffd0e3; align-self:flex-end; border-bottom-right-radius:5px; }
+.bubble strong { font-size:12px; color:#7b65cf; }
+.bubble.user strong { color:#ce4e87; }
+.composer { display:flex; gap:9px; border-top:1px solid var(--line); padding-top:14px; }
+.composer input,.login-form input { min-width:0; flex:1; border:2px solid var(--line); border-radius:13px; padding:12px; outline:none; }
+.composer input:focus,.login-form input:focus { border-color:#b3a5ff; }
+.prompt { position:sticky; top:14px; }
+.muted { color:#82768f; font-size:13px; line-height:1.5; margin:-4px 0 13px; }
+.tiny-label,.public-tag { font-size:10px; color:#8a6cd6; background:#f0edff; border-radius:8px; padding:6px 8px; font-weight:700; }
+pre { white-space:pre-wrap; overflow-wrap:anywhere; background:#29233a; color:#f6eaff; border-radius:13px; padding:14px; min-height:180px; font:13px/1.6 "Courier New",monospace; }
+.full { width:100%; }
+.drawing { margin-top:18px; }
+.draw-heading { align-items:flex-start; }
+.draw-heading .panel-title { margin-bottom:10px; }
+.draw-actions { display:flex; gap:9px; flex-wrap:wrap; }
+canvas { display:block; width:100%; height:300px; border:2px dashed #d7c9ee; border-radius:16px; background:#fff; touch-action:none; cursor:crosshair; }
+.canvas-footer { display:flex; align-items:center; gap:18px; flex-wrap:wrap; padding-top:12px; font-size:13px; }
+.canvas-footer label { display:flex; align-items:center; gap:7px; }
+#canvasHint { color:#91859d; margin-left:auto; }
+footer,.public-note { text-align:center; color:#a096ad; font-size:12px; padding:22px 0 6px; }
+.private-banner { margin:0 0 16px; padding:10px 14px; background:#e7fff0; border:1px solid #bcebcf; border-radius:12px; font-size:13px; }
+.login-wrap { min-height:100vh; display:grid; place-items:center; padding:20px; }
+.login-panel { width:min(430px,100%); padding:26px; }
+.login-panel h1 { margin-bottom:10px; }
+.login-form { display:flex; flex-direction:column; gap:10px; margin:20px 0; }
+.login-form label { font-weight:700; }
+.error { color:#bd245c; font-size:13px; min-height:18px; margin:0; }
+.back-link { color:#7862cf; font-size:13px; }
+@media(max-width:760px) { .layout { grid-template-columns:1fr; } .prompt { position:static; } .topbar,.draw-heading { align-items:flex-start; flex-direction:column; } .messages { min-height:220px; } #canvasHint { margin-left:0; width:100%; } }
+
+/* PessiAI circular profile picture */
+.ai-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+  border: 2px solid #d9ceff;
+  flex: 0 0 36px;
+  display: inline-block;
+  background: #f0edff;
+}

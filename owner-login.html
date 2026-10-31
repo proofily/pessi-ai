@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Owner Login — PessiAI</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <main class="login-wrap">
+    <section class="panel login-panel">
+      <div class="eyebrow">PRIVATE CONTROL ROOM</div>
+      <h1>🔐 Owner login</h1>
+      <p class="muted">This area is only for the person who runs PessiAI.</p>
+      <form id="loginForm" class="login-form">
+        <label for="password">Owner password</label>
+        <input id="password" name="password" type="password" autocomplete="current-password" required maxlength="500" placeholder="Your secret password">
+        <button type="submit">Unlock AI page</button>
+        <p id="error" class="error" role="alert"></p>
+      </form>
+      <a href="/" class="back-link">← Back to human chat</a>
+    </section>
+  </main>
+  <script src="/login.js"></script>
+</body>
+</html>
